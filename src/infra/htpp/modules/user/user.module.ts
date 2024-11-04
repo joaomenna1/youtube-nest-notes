@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { UserController } from './user.controller';
 import { CreateUserUseCase } from '../../../../modules/user/useCases/createUserUseCase/createUserUseCase';
+import { DatabaseModule } from 'src/infra/database/database.module';
 
 @Module({
+  imports: [DatabaseModule],
   controllers: [UserController],
   providers: [CreateUserUseCase],
 })
