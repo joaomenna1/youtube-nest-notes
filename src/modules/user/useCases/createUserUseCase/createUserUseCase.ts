@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { hash } from 'bcrypt';
-import { User } from '../../modules/entities/User';
-import { UserRepository } from '../../modules/repositories/UserRepository';
+import { User } from '../../entities/User';
+import { UserRepository } from '../../repositories/UserRepository';
 
 interface CreateUserRequest {
   name: string;
